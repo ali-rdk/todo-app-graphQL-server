@@ -6,9 +6,7 @@ export const Query = {
     return todos;
   },
   getTodo: async (parent, { id }) => {
-    console.log(id);
     const todo = Todo.findById(id);
-    console.log(todo);
     return todo;
   },
 };
