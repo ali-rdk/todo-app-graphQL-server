@@ -12,4 +12,7 @@ export const Mutation = {
   deleteTodo: async (parent, { id }) => {
     return await Todo.findByIdAndDelete(id);
   },
+  editTodo: async (parent, { id, payload }) => {
+    return await Todo.findByIdAndUpdate(id, payload);
+  },
 };

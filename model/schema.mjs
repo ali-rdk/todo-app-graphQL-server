@@ -12,8 +12,14 @@ export const typeDefs = gql`
     description: String
   }
 
+  input Payload {
+    title: String
+    description: String
+  }
+
   type Mutation {
     addTodo(title: String!, description: String): Todo
     deleteTodo(id: ID!): Todo
+    editTodo(id: ID!, payload: Payload!): Todo
   }
 `;
